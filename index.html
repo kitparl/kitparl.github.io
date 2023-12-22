@@ -34,69 +34,22 @@
     href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
   <link rel="stylesheet" href="./assets/css/canva.css">
 </head>
-
-
 <style>
-  :root {
-  --background: 255, 0, 60;
-  --size: 2rem;
-  --duration: 3s;
-  --scale: 3;
-  --opacity: 0.4;
-}
+   body {
+      margin: 0;
+    }
 
-  .status__icon {
-  width: var(--size);
-  height: var(--size);
-  background: rgb(var(--background));
-  border-radius: 100%;
-  position: relative;
-  
-  animation: pulse-shadow var(--duration) calc(2 * var(--duration) / 3) linear infinite
-}
-
-.status__icon::after, .status__icon::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: rgb(var(--background));
-  border-radius: 100%;
-}
-
-.status__icon:after {
-  animation: pulse var(--duration) linear infinite
-}
-
-.status__icon:before {
-  animation: pulse var(--duration) calc(var(--duration) / 3) linear infinite
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: var(--opacity);
-  }
-  
-  100% {
-    transform: scale(var(--scale));
-    opacity: 0;
-  }
-}
-
-@keyframes pulse-shadow {
-  0% {
-    box-shadow: 0 0 0 0 rgba(var(--background), var(--opacity))
-  }
-  
-  100% {
-    box-shadow: 0 0 0 calc((var(--scale) - 1) * var(--size) / 2) rgba(var(--background), 0)
-  }
-}
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh; /* Set canvas height to be equal to the viewport height */
+      z-index: -1; /* Place the canvas behind other content */
+    }
 </style>
-
 <body>
-
+  <canvas id="can"></canvas>
   <!--
     - #MAIN
   -->
@@ -293,7 +246,7 @@
 
           <li class="navbar-item">
             <button class="navbar-link"
-              data-nav-link>bLOGS</button>
+              data-nav-link>Notes</button>
           </li>
 
           <li class="navbar-item">
@@ -333,7 +286,7 @@
           <li style="--accent-color: #ef476f">Contracting</li>
           <li style="--accent-color: #ffd166">Mentorship</li>
           <li style="--accent-color: #06d6a0">Open Source Collaboration</li>
-          <li style="--accent-color: #118ab2">Workflow Design</li>
+          <li style="--accent-color: #118ab2">Web App Development</li>
           <!-- <li>Design Prototyping
           </li> -->
           <li style="--accent-color: #073b4c">Architecture Design and Implementation</li>
@@ -849,9 +802,75 @@
 
       <article class="contact" data-page="skills">
         
+        <header>
+          <h2 class="h2 article-title">Languages</h2>
+        </header>
+
+        <section class="skill">
+
+          <!-- <header>
+            <h2 class="h2 article-title"
+              style="display: block;">Skills</h2>
+          </header> -->
+          <div class="skills">
+
+            <a class="logo_div"
+            href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
+            rel="noopener noreferrer" target="_blank">
+            <img src="./assets/Skills-Logos/nodejs.png"
+              alt="JavaScript logo" class="s-logo">
+            <h3 class="h3">Javascript + node.js</h3>
+          </a>
+
+            <a class="logo_div"
+            href="https://www.java.com/en/download/help/whatis_java.html"
+            rel="noopener noreferrer" target="_blank">
+            <img src="./assets/Skills-Logos/L_java.svg"
+              alt="JAVA logo" class="s-logo">
+            <h3 class="h3">Java</h3>
+          </a>
+
+            <a class="logo_div"
+              href="https://www.python.org/"
+              rel="noopener noreferrer" target="_blank">
+              <img src="./assets/Skills-Logos/python.png"
+                alt="Python logo" class="s-logo">
+              <h3 class="h3">Python</h3>
+            </a>
+        <!-- Typescipt -->
+        <a class="logo_div"
+        href="https://www.typescriptlang.org/"
+        rel="noopener noreferrer" target="_blank">
+        <img
+          src="./assets/Skills-Logos/typescript.png"
+          alt="Typescipt logo" class="s-logo">
+        <h3 class="h3"> Typescipt </h3>
+      </a>
+            <a class="logo_div"
+              href="https://www.geeksforgeeks.org/html5-introduction/"
+              rel="noopener noreferrer" target="_blank">
+              <img src="./assets/Skills-Logos/L_html.svg"
+                alt="html5 logo" class="s-logo">
+              <h3 class="h3">HTML 5</h3>
+            </a>
+
+            <a class="logo_div"
+              href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS"
+              rel="noopener noreferrer" target="_blank">
+              <img src="./assets/Skills-Logos/L_css.svg"
+                alt="CSS logo" class="s-logo">
+              <h3 class="h3">CSS</h3>
+            </a>
+
+          </div>
+
+        </section>
+
+        <br>
+
 
         <header>
-          <h2 class="h2 article-title">Skills</h2>
+          <h2 class="h2 article-title">Frameworks</h2>
         </header>
 
         <section class="skill">
@@ -873,69 +892,14 @@
               <h3 class="h3">Spring Boot</h3>
             </a>
 
-            <a class="logo_div"
-              href="https://www.java.com/en/download/help/whatis_java.html"
-              rel="noopener noreferrer" target="_blank">
-              <img src="./assets/Skills-Logos/L_java.svg"
-                alt="JAVA logo" class="s-logo">
-              <h3 class="h3">Java</h3>
-            </a>
 
-            <a class="logo_div"
-              href="https://spring.io/projects/spring-framework"
-              rel="noopener noreferrer" target="_blank">
-              <img
-                src="./assets/Skills-Logos/L_spring-icon.svg"
-                alt="Spring logo" class="s-logo">
-              <h3 class="h3">Spring</h3>
-            </a>
-
-            <a class="logo_div"
-              href="https://www.theserverside.com/definition/Hibernate"
-              rel="noopener noreferrer" target="_blank">
-              <img
-                src="./assets/Skills-Logos/L_hibernate.svg"
-                alt="Hibernate logo" class="s-logo">
-              <h3 class="h3">Hibernate</h3>
-            </a>
-
-            <a class="logo_div"
-            href="https://en.wikipedia.org/wiki/Java_Database_Connectivity#:~:text=Java%20Database%20Connectivity%20(JDBC)%20is,Edition%20platform%2C%20from%20Oracle%20Corporation."
-            rel="noopener noreferrer" target="_blank">
-            <img
-              src="./assets/Skills-Logos/jdbc-logo.svg"
-              alt="JDBC logo" class="s-logo">
-            <h3 class="h3">JDBC</h3>
-          </a>
-
-          <a class="logo_div"
-          href="https://restfulapi.net/"
-          rel="noopener noreferrer" target="_blank">
-          <img
-            src="./assets/Skills-Logos/restAPI.png"
-            alt="REST API Logo" class="s-logo">
-          <h3 class="h3">REST API</h3>
-        </a>
-
-          <a class="logo_div"
-
-          href="https://www.theserverside.com/definition/Hibernate"
-          rel="noopener noreferrer" target="_blank">
-          <img
-            src="./assets/Skills-Logos/j2ee-java.png"
-            alt="J2EE logo" class="s-logo">
-          <h3 class="h3"> J<sub>2</sub>EE </h3>
-        </a>
-
-        <!-- Typescipt -->
-        <a class="logo_div"
-        href="https://www.typescriptlang.org/"
-        rel="noopener noreferrer" target="_blank">
-        <img
-          src="./assets/Skills-Logos/typescript.png"
-          alt="Typescipt logo" class="s-logo">
-        <h3 class="h3"> Typescipt </h3>
-      </a>
+    <a class="logo_div"
+    href="https://www.oracle.com/mysql/what-is-mysql/"
+    rel="noopener noreferrer" target="_blank">
+    <img src="./assets/Skills-Logos/L_mysql.svg"
+      alt="Mysql logo" class="s-logo">
+    <h3 class="h3">FAST API</h3>
+  </a>
 
       <!-- Angular -->
       <a class="logo_div"
@@ -947,56 +911,66 @@
       <h3 class="h3"> Angular</h3>
     </a>
 
-    <!-- Node js -->
     <a class="logo_div"
-    href="https://nodejs.org/en/about"
+    href="https://www.oracle.com/mysql/what-is-mysql/"
     rel="noopener noreferrer" target="_blank">
-    <img
-      src="./assets/Skills-Logos/nodejs.png"
-      alt="Nodejs logo" class="s-logo">
-    <h3 class="h3"> Node js</h3>
+    <img src="./assets/Skills-Logos/express.png"
+      alt="Mysql logo" class="s-logo">
+    <h3 class="h3">Express.js</h3>
   </a>
 
+  <a class="logo_div"
+  href="https://spring.io/projects/spring-framework"
+  rel="noopener noreferrer" target="_blank">
+  <img
+    src="./assets/Skills-Logos/L_spring-icon.svg"
+    alt="Spring logo" class="s-logo">
+  <h3 class="h3">Spring</h3>
+</a>
 
-            <a class="logo_div"
-              href="https://www.oracle.com/mysql/what-is-mysql/"
-              rel="noopener noreferrer" target="_blank">
-              <img src="./assets/Skills-Logos/L_mysql.svg"
-                alt="Mysql logo" class="s-logo">
-              <h3 class="h3">MySQL</h3>
-            </a>
 
-            <a class="logo_div"
-              href="https://git-scm.com/"
-              rel="noopener noreferrer" target="_blank">
-              <img src="./assets/Skills-Logos/git-logo.png"
-                alt="Github logo" class="s-logo">
-              <h3 class="h3">Git</h3>
-            </a>
+  <a class="logo_div"
+  href="https://spring.io/projects/spring-boot"
+  rel="noopener noreferrer" target="_blank">
+  <img
+    src="./assets/Skills-Logos/bootstrap.png"
+    alt="SpringBoot logo" class="s-logo">
+  <h3 class="h3">Bootstrap</h3>
+</a>
+          </div>
+        </section>
+        <br>
 
-            <a class="logo_div"
-              href="https://www.geeksforgeeks.org/html5-introduction/"
-              rel="noopener noreferrer" target="_blank">
-              <img src="./assets/Skills-Logos/L_html.svg"
-                alt="html5 logo" class="s-logo">
-              <h3 class="h3">HTML 5</h3>
-            </a>
+        <header>
+          <h2 class="h2 article-title">Databases</h2>
+        </header>
 
-            <a class="logo_div"
-              href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS"
-              rel="noopener noreferrer" target="_blank">
-              <img src="./assets/Skills-Logos/L_css.svg"
-                alt="CSS logo" class="s-logo">
-              <h3 class="h3">CSS</h3>
-            </a>
+        <section class="skill">
 
+          <!-- <header>
+            <h2 class="h2 article-title"
+              style="display: block;">Skills</h2>
+          </header> -->
+          <div class="skills">
             <a class="logo_div"
-              href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
-              rel="noopener noreferrer" target="_blank">
-              <img src="./assets/Skills-Logos/L_js.svg"
-                alt="JavaScript logo" class="s-logo">
-              <h3 class="h3">Javascript</h3>
-            </a>
+            href="https://www.oracle.com/mysql/what-is-mysql/"
+            rel="noopener noreferrer" target="_blank">
+            <img src="./assets/Skills-Logos/L_mysql.svg"
+              alt="Mysql logo" class="s-logo">
+            <h3 class="h3">MySQL</h3>
+          </a>
+
+
+          <a class="logo_div"
+          href="https://www.oracle.com/mysql/what-is-mysql/"
+          rel="noopener noreferrer" target="_blank">
+          <img src="./assets/Skills-Logos/mongo.png"
+            alt="Mysql logo" class="s-logo">
+          <h3 class="h3">MongoDB</h3>
+        </a>
+
+
+  
 
           </div>
 
@@ -1020,18 +994,11 @@
               href="https://www.jetbrains.com/idea/"
               rel="noopener noreferrer" target="_blank">
               <img
-                src="./assets/Tools-Logos/intellij-logo.svg"
+                src="./assets/Tools-Logos/orm.png"
                 alt="SpringBoot logo" class="s-logo">
-              <h3 class="h3">IntelliJ IDEA</h3>
+              <h3 class="h3">ORM tools</h3>
             </a>
 
-            <a class="logo_div"
-              href="https://maven.apache.org/"
-              rel="noopener noreferrer" target="_blank">
-              <img src="./assets/Tools-Logos/maveen-logo.png"
-                alt="JAVA logo" class="s-logo">
-              <h3 class="h3">Apache Maven</h3>
-            </a>
 
             <a class="logo_div"
               href="https://spring.io/projects/spring-framework"
@@ -1042,55 +1009,21 @@
               <h3 class="h3">Postman</h3>
             </a>
 
-            <a class="logo_div"
-            href="https://github.com/pranshubisht9"
-            rel="noopener noreferrer" target="_blank">
-            <img src="./assets/Tools-Logos/L_github.svg"
-              alt="Github logo" class="s-logo">
-            <h3 class="h3">Github</h3>
-          </a>
-
           <a class="logo_div"
-          href="https://github.com/pranshubisht9"
+          href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F"
           rel="noopener noreferrer" target="_blank">
-          <img src="./assets/Tools-Logos/gitLab.png"
-            alt="Gitlab logo" class="s-logo">
-          <h3 class="h3">Gitlab</h3>
+          <img src="./assets/Skills-Logos/git-logo.png"
+            alt="Git logo" class="s-logo">
+          <h3 class="h3">Git</h3>
         </a>
 
-        <a class="logo_div"
-        href="https://github.com/pranshubisht9"
-        rel="noopener noreferrer" target="_blank">
-        <img src="./assets/Tools-Logos/awsCodeCommit.svg"
-          alt="Gitlab logo" class="s-logo">
-        <h3 class="h3">Aws codeCommit</h3>
-      </a>
-
             <a class="logo_div"
-              href="https://www.javatpoint.com/spring-boot-download-and-install-sts-ide#:~:text=Spring%20Tool%20Suite%20(STS)%20IDE,quick%20fixes%20for%20the%20applications."
-              rel="noopener noreferrer" target="_blank">
-              <img
-                src="./assets/Tools-Logos/sts-tool-logo.png"
-                alt="Hibernate logo" class="s-logo">
-              <h3 class="h3">Spring Tool Suite</h3>
-            </a>
-
-
-            <a class="logo_div"
-              href="https://code.visualstudio.com/"
-              rel="noopener noreferrer" target="_blank">
-              <img src="./assets/Tools-Logos/vs-code-logo.svg"
-                alt="html5 logo" class="s-logo">
-              <h3 class="h3">VS Code</h3>
-            </a>
-
-            <a class="logo_div"
-              href="https://swagger.io/"
-              rel="noopener noreferrer" target="_blank">
-              <img src="./assets/Tools-Logos/swagger-logo.png"
-                alt="CSS logo" class="s-logo">
-              <h3 class="h3">Swagger</h3>
-            </a>
+            href="https://maven.apache.org/"
+            rel="noopener noreferrer" target="_blank">
+            <img src="./assets/Tools-Logos/maveen-logo.png"
+              alt="JAVA logo" class="s-logo">
+            <h3 class="h3">Apache Maven</h3>
+          </a>
 
           </div>
 
@@ -1683,3 +1616,5 @@
     }
   }).then(r => r.text())
 </script> -->
+
+<script src="./assets/js/canvas.js"></script>

@@ -46,6 +46,6 @@ let myResume = () =>{
   );
 }
 
-GitHubCalendar(".calendar", "pranshubisht9");
+// GitHubCalendar(".calendar", "pranshubisht9");
   // or enable responsive functionality
-  GitHubCalendar(".calendar", "pranshubisht9", { responsive: true });
+  // GitHubCalendar(".calendar", "pranshubisht9", { responsive: true });
