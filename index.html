@@ -1,297 +1,1685 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranshu Singh Bisht</title>
-    <link rel="stylesheet" href="./css/timer.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/slider.css">
-    <link rel="stylesheet" href="./css/myPhoto.css">
-    <link rel="shortcut icon" href="./logo/logo.png" type="image/x-icon">
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-    
-.border{
-    border: thick double aquamarine;
-    border-radius: 2%;
-}
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <title>Pranshu Singh Bisht</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon"
+    href="./assets/Skills-Logos/coding.png"
+    type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com"
+    crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+  <link rel="stylesheet" href="./assets/css/canva.css">
 </head>
+
+
+<style>
+  :root {
+  --background: 255, 0, 60;
+  --size: 2rem;
+  --duration: 3s;
+  --scale: 3;
+  --opacity: 0.4;
+}
+
+  .status__icon {
+  width: var(--size);
+  height: var(--size);
+  background: rgb(var(--background));
+  border-radius: 100%;
+  position: relative;
+  
+  animation: pulse-shadow var(--duration) calc(2 * var(--duration) / 3) linear infinite
+}
+
+.status__icon::after, .status__icon::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgb(var(--background));
+  border-radius: 100%;
+}
+
+.status__icon:after {
+  animation: pulse var(--duration) linear infinite
+}
+
+.status__icon:before {
+  animation: pulse var(--duration) calc(var(--duration) / 3) linear infinite
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: var(--opacity);
+  }
+  
+  100% {
+    transform: scale(var(--scale));
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-shadow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--background), var(--opacity))
+  }
+  
+  100% {
+    box-shadow: 0 0 0 calc((var(--scale) - 1) * var(--size) / 2) rgba(var(--background), 0)
+  }
+}
+</style>
+
 <body>
-    <header>
-        <div id="namaste" class="border">
-            <div>
-                <img src="./logo/namaskar1.png" style="filter: brightness(0) invert(1)" alt="" height="80">
-                <span id="namaskar">नमस्कार</span> <img  src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">
-</div>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!-- 
+
+      HEY YOU... YES YOU.. HAHAHA YOU ARE INSPECTING...! EITHER YOU ARE A ENSTHUSISTIC A CURIOUS PERSON OR TRYING TO GET INFORMATION...!
+
+      - CODE WRITTEN IN PURE HTML, CSS, JS
+      - NO FRAMEWORKS USED
+      - JUST SHOWCASE OF MY SKILLS
+
+     -->
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/photo.jpg"
+            alt="Pranshu Singh Bisht" width="80">
+
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Pranshu
+            Singh Bisht</h1>
+
+          <p class="title">Software Engineer</p>
         </div>
-        <div id="quoteBox" class="border">
-            <h2 id="quote"></h2>
-            <span id="authorName"></span>
-        </div>
-                <div id="clockdate" class="border">
-                <div class="clockdate-wrapper">
-                  <div id="clock"></div>
-                  <div id="date"></div>
-                </div>
-              </div>
-        
-    </header>
-    <div id="animation-social">
-        <div class="carousel" id="sliderBox" data-flickity='{"wrapAround":true, "autoPlay": true }'>
 
-            <div class="carousel-cell grow">
-                <a href="https://www.instagram.com/pranshu_bisht/" target="_blank">
-                <img src="./logo/instagram.png" alt="Instagram"></a>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
 
-            
-            <div class="carousel-cell grow">
-                <a href="https://www.linkedin.com/in/pranshubisht9/" target="_blank">
-                <img src="./logo/linkdln.png" alt="linkdln"> </a>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:pranshubisht9@gmail.com"
+                class="contact-link">pranshu.java@gmail.com</a>
             </div>
 
-            <div class="carousel-cell grow">
-            <a href="https://github.com/pranshubisht9" target="_blank">
-                <img src="./logo/github.png" alt="Github"> </a>
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon
+                name="phone-portrait-outline"></ion-icon>
             </div>
 
-            <div class="carousel-cell grow">
-                <a href="https://www.facebook.com/bishtpranshu/" target="_blank">
-                <img src="./logo/facebook.png" alt=""Facebook> </a>
-            </div>
-    
-            <div class="carousel-cell grow">
-                <a href="https://youtu.be/EPgClyfToS0" target="_blank">
-                <img src="./logo/youtube.png" alt="Youtube"> </a>
-            </div>
-    
-            <div class="carousel-cell grow">
-                <a href="https://t.me/pranshu_bisht" target="_blank">
-                <img src="./logo/telegram.png" alt="Telegram"> </a>
-            </div>
-    
-                <div class="carousel-cell grow">
-                    <a href="https://twitter.com/pranshubisht9" target="_blank">
-                    <img src="./logo/twitter.png" alt="Twitter"> </a>
-        </div>
-    </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
 
-    </div>
-            <div id="main">
-                <div id="photo" class="blur">
-                <img src="./assets/img/pranshu-java.JPG" alt="Pranshu Singh Bisht" id="meri-Photo">
-
-
-            </div>
-            <div id="personal-info">
-                <div>
-                    <div>
-                        I am<h1>Pranshu Singh Bisht</h1>
-                    </div>
-                    <div>
-                        Born on <h1>12, December</h1>
-                    </div>
-                    <div>
-                        More about me <h1></h1> 
-                        <!-- <a href = "mailto: pranshubisht9@gmail.com"  style="font-size: 25px;" target="_blank" class="mysite-ref">pranshubisht9@gmail.com</a> -->
-                        <a href = "https://www.pranshusinghbisht.online"  style="font-size: 25px;" target="_blank" class="mysite-ref">www.pranshusinghbisht.online</a>
-                    </div>
-<!--                     <div>
-                        Website <h1></h1><a href="https://www.pranshusinghbisht.online/" style="font-size: 25px;" target="_blank" id="mysiteonline" class="mysite-ref">www.pranshusinghbisht.online</a>
-                    </div> -->
-                    <div>
-                        Call me <h1>Parley</h1>
-                    </div>
-                </div>
-            </div>
+              <a href="tel:+917522023037"
+                class="contact-link">+91 7522023037</a>
             </div>
 
-        <!-- main 2  -->
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2000-08-12">August 12,
+                2000</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Lucknow, Uttar-Pradesh, INDIA
+              </address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/pranshubisht/"
+              class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/pranshubisht9"
+              class="social-link" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/pranshu_bisht/"
+              target="_blank" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/bishtpranshu/"
+              class="social-link" target="_blank">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://twitter.com/pranshubisht9"
+              class="social-link" target="_blank">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.youtube.com/channel/UCOYvT9NgBowQjzMfu8ptmkw"
+              class="social-link" target="_blank">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active"
+              data-nav-link>About</button>
+          </li>
+
+          <!-- <li class="navbar-item">
+            <button class="navbar-link"
+              data-nav-link>Resume</button>
+          </li> -->
+
+          <li class="navbar-item">
+            <button class="navbar-link"
+              data-nav-link>Skills</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link"
+              data-nav-link>bLOGS</button>
+          </li>
+
+          <li class="navbar-item">
+            <!-- <button class="navbar-link" data-nav-link>Portfolio</button> -->
+            <button class="navbar-link"
+              data-nav-link>Projects</button>
+
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link"
+              data-nav-link>Certifications</button>
+          </li>
 
 
-<!--         <div id="main2" class="service">
+          <li class="navbar-item">
+            <button class="navbar-link"
+              data-nav-link>Contact</button>
+          </li>
 
-          <ul class="service-list" >
+        </ul>
 
-            <li class="service-item" id="psb_online"  class="rotate">
+      </nav>
+      <!--
+        - #ABOUT
+      -->
 
-              <div class="service-icon-box">
-                <img src="./logo/icon-dev.svg" class="photo_" alt="Web development icon" width="40">
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">Let's Talk Business</h2>
+          <h4 class="h4">What Can I Do For You?</h4>
+          <p class="service-item-text">experience in the tech industry, I can help you achieve your business tech goals by implementing the correct solutions.</p>
+        </header>
+
+        <ol class="ol-a">
+          <li style="--accent-color: #ef476f">Contracting</li>
+          <li style="--accent-color: #ffd166">Mentorship</li>
+          <li style="--accent-color: #06d6a0">Open Source Collaboration</li>
+          <li style="--accent-color: #118ab2">Workflow Design</li>
+          <!-- <li>Design Prototyping
+          </li> -->
+          <li style="--accent-color: #073b4c">Architecture Design and Implementation</li>
+        </ol>
+
+        <!-- tyryryr -->
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Highly motivated Software Engineer, strong in
+            design and integration with intuitive
+            problem-solving skills. I have ability to
+            translate business requirements into technical
+            solutions.
+          </p>
+
+          <p>
+            <br>
+<!--             - 🌱 Recently, I completed my <b>Java Web Development</b> Course. <br> <br> -->
+<!--             - 💬 I am seeking a role where I can utilize my skills to develop impactful products for an organization that is committed to making a difference in people's lives.<br> <br> -->
+            - ⚡ Fun fact: There are 10 types of people in
+            this world those who understand binary and those
+            who don't :)
+            <br> <br>
+          </p>
+        </section>
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title article-title">What I'm good at</h3>
+          <div id="good-at-list"> 
+          <ul class="good-at-list">
+            <li class="shopping">
+              <span class="title">Backend solutions</span>
+              <span class="subtitle">Elevating Your Digital Infrastructure</span>
+            </li>
+            <li class="personal">
+              <span class="title">Internet Of Things</span>
+              <span class="subtitle">Connecting the Unseen</span>
+            </li>
+            <li class="work">
+              <span class="title">Integrations</span>
+              <span class="subtitle">Seamless Workflow Harmony</span>
+            </li>
+            <li class="shopping">
+              <span class="title">PWAs (progressive web apps)</span>
+              <span class="subtitle">Revolutionizing Online Experiences</span>
+            </li>
+            <li class="personal">
+              <span class="title">Complete solutions, front to back</span>
+              <span class="subtitle">End-to-End Excellence</span>
+            </li>
+            <li class="work">
+              <span class="title">Putting personality into services</span>
+              <span class="subtitle">Crafting Unique Service Experiences</span>
+            </li>
+          </div>
+        </ul>
+          <!-- <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box" style="text-align: center;">
+                <img src="./assets/images/icon-dev.svg"
+                  alt="Web development icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
+                <h4 class="h4 service-item-title">Software Engineer</h4>
 
                 <p class="service-item-text">
-                  High-quality development of sites at the professional level.
+                  High-quality Application development at the
+                  professional level.
                 </p>
               </div>
 
             </li>
 
-            <li class="service-item" id="sangharsh-official">
-              
+          </ul> -->
+
+        </section>
+
+        <section class="service">
+
+          <h3 class="h3 service-title article-title">What
+            i'm doing</h3>
+
+          <ul class="service-list">
+
+            <!-- <li class="service-item">
+
               <div class="service-icon-box">
-                <img src="./logo/guitar.svg" class="photo_" alt="mobile app icon" width="40" height="80">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Sangharsh Official Band</h4>
+                <h4 class="h4 service-item-title">Web design</h4>
 
                 <p class="service-item-text">
-                  co-founder and core administrator of jamming band who is passionate about public featuring.
+                  The most modern and high-quality design made at a professional level.
                 </p>
               </div>
+
+            </li> -->
+
+            <li class="service-item">
+
+              <div class="service-icon-box" style="text-align: center;">
+                <img src="./assets/images/icon-dev.svg"
+                  alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Software Engineer</h4>
+
+                <p class="service-item-text">
+                  High-quality Application development at the
+                  professional level.
+                </p>
+              </div>
+
             </li>
-        
+
+            <!-- <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/guitar.svg"
+                  alt="mobile app icon" width="40"
+                  height="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Sangharsh
+                  Official Band</h4>
+
+                <p class="service-item-text">
+                  co-founder and core administrator of
+                  jamming band who is passionate about
+                  public featuring.
+                </p>
+              </div>
+            </li> -->
+
+
+            <!--
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+               <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div> 
+
+            </li>
+            -->
 
           </ul>
-        </div> -->
-<!-- footer  -->
-<br>
 
-<div style=" background-color: #243B55; color: white; font-family: monospace; display: flex; justify-content: center;">
-    <div style="width: 80%;">
-    <br>
-    Welcome to my world! I'm a software engineer with a passion for creativity, movement, and music. From writing code to dancing, playing football, and strumming the guitar, I'm a true Renaissance person who thrives on diverse interests.
-<br>
-<br>
+        </section>
 
-As a software engineer, I'm well-versed in Javascript, Java with frameworks. I love the thrill of solving complex problems and creating innovative solutions that make a difference. My dedication to staying up-to-date with the latest industry trends and constantly improving my skills sets me apart in the field.
-<br>
-<br>
+        <section class="service">
 
-But I'm not just a tech enthusiast! I'm also a seasoned dancer, with a background in freestyle. Dancing is my way of expressing my emotions and creativity through graceful movements, captivating performances, and a deep connection with music.
+          <h3 class="h3 service-title article-title">Recruitment Status
+          </h3>
 
-<br>
-<br>
+          <ul style="display: flex; align-items: center;">
+            <br>
+            <br>
+            <br>
+            <span class="status__icon" style="margin-left: 1%;"></span>
+            <h2 class="h4"  style="margin-left:3%;">Still Not Looking</h2>
+          </ul>
+        </section>
 
-In addition, I'm an avid football player, state level champion, 3 times regional champion. relishing the excitement of the game and the camaraderie of being part of a team. My agility, coordination, and strategic thinking make me a formidable player on the field, and I'm always up for a friendly match or an organized league. 
+        <section class="service">
 
-<br>
-<br>
+          <h3 class="h3 service-title article-title">Connect With Me
+          </h3>
 
-Music is another passion that runs through my veins, and I'm a skilled guitar player.I was a one of the core member of Sangharsh Official band. From strumming soulful melodies to experimenting with different playing techniques and genres, I find joy in creating my own musical expressions and connecting with others through the universal language of music.
+          <div class="social-icons-btn">
+            <a class="icons twitter"  href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+            <a class="icons facebook"  href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a class="icons instagram"  href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a class="icons linkedin"  href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </div>
+    
+        </section>
+        <!--
+          - testimonials
+        -->
+        <!--
+        <section class="testimonials">
 
-<br>
-<br>
+          <h3 class="h3 testimonials-title">Testimonials</h3>
 
-Through this platform, I'm excited to share my diverse interests, insights, and experiences with you. Whether it's discussing the latest tech trends, sharing dance tips, football strategies, or guitar playing techniques, I hope to inspire, entertain, and connect with fellow enthusiasts who share similar passions.
-<br>
-<br>
+          <ul class="testimonials-list has-scrollbar">
 
-Thank you for joining me on this journey, and I look forward to engaging with you and sharing my world as a software engineer with a flair for creativity and a love for movement and music!
-<br>
-<br>
-</div>
-</div>
-<br>
-<footer>
-    <div>Connect with me :</div>
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item >
 
-    <div id="sm">
-        <div>
-                <a href="https://youtu.be/EPgClyfToS0" target="_blank">
-                <img src="./logo/yt2.svg" alt="Youtube"></a>
+                <figure class="testimonials-avatar-box">
+                  <img src="https://media-exp1.licdn.com/dms/image/C4D03AQF07IKbnjsLqA/profile-displayphoto-shrink_800_800/0/1659190424952?e=1672876800&v=beta&t=RCYjzL1B5lKlnG9uVe6sxXMf9G6VEluGF5kzF6lbNzY" alt="Lokesh Rautela" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Lokesh Rautela</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Pranshu is a great guy and He has a polite attitude, I met him while we were on same project,  He's very hardworking the thing that I like most about him he did his all task on time he takes his work very seriously and he's professional and knows what he's doing.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFFXFwgOCMpkw/profile-displayphoto-shrink_800_800/0/1659118045594?e=1672876800&v=beta&t=OlnVOCw0Y6_JkTAAcnhH8H5CxZwivCNpnoB-RvmIseY" alt="Anish Jha" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Anish Jha</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    I have worked very closely with Pranshu and I've learnt a lot. The type of curious and creative mind he has, has allowed him to learn so much in such a short period of time. He is always keen and excited to know about technology and stuff. He is a passionate programmer who is passionate about learning and his work. The thing is that he is Excellent at multi-tasking and never gets tired of coding.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="https://media-exp1.licdn.com/dms/image/C4D03AQH1Sns0zPV6dQ/profile-displayphoto-shrink_800_800/0/1661405831243?e=1672876800&v=beta&t=hYt1vC6iDJTD00LrsePH2Wr70Zc-9MJMK4uwIAMIk6M" alt="Sufiyan Kharadi" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Sufiyan Kharadi</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    We were in a same project at the time of clone of kitto.org. I really like his way to solve the problem which is marvelous. He is very enthusistic with his work and also good helper.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+             <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li> 
+
+        </ul>
+
+        </section>-->
+
+        <!-- Github Calender -->
+        <!-- <section class="services" id="services">
+          <div class="content"
+            style="margin-bottom: 2.5% !important;">
+            <br>
+            <h2 class="title"><span id="gc"
+                class="article-title"> Github
+                Contribution</span></h2>
+            <br>
+            <div class="calendar"></div>
+          </div>
+          <p style="text-align: center;" class="gc-pic">
+            <img
+              src="https://github-readme-stats.vercel.app/api?username=pranshubisht9&show_icons=true&theme=dark"
+              class="gc_pic_in" />
+            <br>
+            <img
+              src="https://github-readme-streak-stats.herokuapp.com/?user=pranshubisht9&theme=dark"
+              class="gc_pic_in" />
+            <br>
+            <br>
+            <img
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=pranshubisht9&theme=dark"
+              id="most-used-lang" />
+            <br>
+          </p>
+        </section> -->
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn"
+              data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="" alt="pranshu singh" width="80"
+                  data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg"
+                alt="quote icon">
+            </div>
+            <div class="modal-content">
+              <h4 class="h3 modal-title" data-modal-title>
+                Pranshu</h4>
+
+              <time datetime="2021-06-14">29 Aug,
+                2022</time>
+              <div data-modal-text>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur
+                  adipisicing elit. Aliquid similique
+                  quibusdam libero sed unde nemo sit
+                  molestias modi, voluptate culpa esse
+                  perspiciatis deserunt fugit obcaecati
+                  porro perferendis incidunt voluptatum? Ut
+                  alias eos eaque, nostrum suscipit delectus
+                  at neque saepe aliquam?
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <!--
+        - #RESUME
+      -->
+<!--
+      <article class="resume" data-page="resume">
+
+        <header
+          style="display: flex; justify-content: space-between;">
+          <h2 class="h2 article-title">Resume</h2>
+          <a href="./assets/resume/Pranshu_Singh_Bisht_Resume.pdf"
+            download target="_blank">
+
+
+  
+
+             <img
+              src="https://img.icons8.com/plasticine/100/null/resume.png"
+              height="60px" id="cvL" onclick="myResume()" />
+
+
+          </a>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <div>
-                <a href="https://wa.me/+917522023037" target="_blank">
-                <img src="./logo/wt2.svg" alt="Whatsapp"> </a>
+            <h3 class="h3">Education</h3>
+
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Chandigarh
+                University</h4>
+
+              <span>2022 — 2024</span>
+
+              <p class="timeline-text">
+                Masters in Computer Application
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Lucknow
+                University</h4>
+
+              <span>2018 — 2021</span>
+
+              <p class="timeline-text">
+                Bachelor of Science
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Secondary
+                Education (Kendriya Vidyalaya AMC Lucknow)
+              </h4>
+
+              <span>2016 — 2017</span>
+
+              <p class="timeline-text">
+                PCM with Computer Science
+              </p>
+
+            </li>
+
+             <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">High school (Kendriya Vidyalaya AMC Lucknow)</h4>
+
+              <span>2014 — 2015</span>
+
+              <p class="timeline-text">
+                Elementary
+              </p>
+
+            </li> 
+
+          </ol>
+
+
+
+        </section>
+
+
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <div>
-                <a href="https://twitter.com/pranshubisht9" target="_blank">
-                <img src="./logo/tw2.svg" alt="Twitter"> </a>
+            <h3 class="h3">Download Resume</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <section class="skill">
+
+              <header>
+                <h2 class="h2 article-title"
+                  style="display: block;">Skills</h2>
+              </header> 
+              <div class="skills">
+
+
+
+                <a class="logo_div"
+                  href="./assets/resume/Pranshu_Singh_Bisht_Resume.pdf"
+                  download target="_blank"
+                  onclick="myResume()">
+                  <img
+                    src="https://img.icons8.com/plasticine/100/null/contract-job.png"
+                    alt="SpringBoot logo" class="s-logo">
+                  <h3 class="h3">Resume</h3>
+                </a>
+
+
+              </div>
+
+            </section>
+
+          </ol>
+
+        </section>
+
+      </article> -->
+
+
+      <!-- naukro skills  -->
+
+      <article class="contact" data-page="skills">
+        
+
+        <header>
+          <h2 class="h2 article-title">Skills</h2>
+        </header>
+
+        <section class="skill">
+
+          <!-- <header>
+            <h2 class="h2 article-title"
+              style="display: block;">Skills</h2>
+          </header> -->
+          <div class="skills">
+
+
+
+            <a class="logo_div"
+              href="https://spring.io/projects/spring-boot"
+              rel="noopener noreferrer" target="_blank">
+              <img
+                src="./assets/Skills-Logos/L_spring-boot-logo.png"
+                alt="SpringBoot logo" class="s-logo">
+              <h3 class="h3">Spring Boot</h3>
+            </a>
+
+            <a class="logo_div"
+              href="https://www.java.com/en/download/help/whatis_java.html"
+              rel="noopener noreferrer" target="_blank">
+              <img src="./assets/Skills-Logos/L_java.svg"
+                alt="JAVA logo" class="s-logo">
+              <h3 class="h3">Java</h3>
+            </a>
+
+            <a class="logo_div"
+              href="https://spring.io/projects/spring-framework"
+              rel="noopener noreferrer" target="_blank">
+              <img
+                src="./assets/Skills-Logos/L_spring-icon.svg"
+                alt="Spring logo" class="s-logo">
+              <h3 class="h3">Spring</h3>
+            </a>
+
+            <a class="logo_div"
+              href="https://www.theserverside.com/definition/Hibernate"
+              rel="noopener noreferrer" target="_blank">
+              <img
+                src="./assets/Skills-Logos/L_hibernate.svg"
+                alt="Hibernate logo" class="s-logo">
+              <h3 class="h3">Hibernate</h3>
+            </a>
+
+            <a class="logo_div"
+            href="https://en.wikipedia.org/wiki/Java_Database_Connectivity#:~:text=Java%20Database%20Connectivity%20(JDBC)%20is,Edition%20platform%2C%20from%20Oracle%20Corporation."
+            rel="noopener noreferrer" target="_blank">
+            <img
+              src="./assets/Skills-Logos/jdbc-logo.svg"
+              alt="JDBC logo" class="s-logo">
+            <h3 class="h3">JDBC</h3>
+          </a>
+
+          <a class="logo_div"
+          href="https://restfulapi.net/"
+          rel="noopener noreferrer" target="_blank">
+          <img
+            src="./assets/Skills-Logos/restAPI.png"
+            alt="REST API Logo" class="s-logo">
+          <h3 class="h3">REST API</h3>
+        </a>
+
+          <a class="logo_div"
+
+          href="https://www.theserverside.com/definition/Hibernate"
+          rel="noopener noreferrer" target="_blank">
+          <img
+            src="./assets/Skills-Logos/j2ee-java.png"
+            alt="J2EE logo" class="s-logo">
+          <h3 class="h3"> J<sub>2</sub>EE </h3>
+        </a>
+
+        <!-- Typescipt -->
+        <a class="logo_div"
+        href="https://www.typescriptlang.org/"
+        rel="noopener noreferrer" target="_blank">
+        <img
+          src="./assets/Skills-Logos/typescript.png"
+          alt="Typescipt logo" class="s-logo">
+        <h3 class="h3"> Typescipt </h3>
+      </a>
+
+      <!-- Angular -->
+      <a class="logo_div"
+      href="https://angular.io/"
+      rel="noopener noreferrer" target="_blank">
+      <img
+        src="./assets/Skills-Logos/angular.png"
+        alt="Angular logo" class="s-logo">
+      <h3 class="h3"> Angular</h3>
+    </a>
+
+    <!-- Node js -->
+    <a class="logo_div"
+    href="https://nodejs.org/en/about"
+    rel="noopener noreferrer" target="_blank">
+    <img
+      src="./assets/Skills-Logos/nodejs.png"
+      alt="Nodejs logo" class="s-logo">
+    <h3 class="h3"> Node js</h3>
+  </a>
+
+
+            <a class="logo_div"
+              href="https://www.oracle.com/mysql/what-is-mysql/"
+              rel="noopener noreferrer" target="_blank">
+              <img src="./assets/Skills-Logos/L_mysql.svg"
+                alt="Mysql logo" class="s-logo">
+              <h3 class="h3">MySQL</h3>
+            </a>
+
+            <a class="logo_div"
+              href="https://git-scm.com/"
+              rel="noopener noreferrer" target="_blank">
+              <img src="./assets/Skills-Logos/git-logo.png"
+                alt="Github logo" class="s-logo">
+              <h3 class="h3">Git</h3>
+            </a>
+
+            <a class="logo_div"
+              href="https://www.geeksforgeeks.org/html5-introduction/"
+              rel="noopener noreferrer" target="_blank">
+              <img src="./assets/Skills-Logos/L_html.svg"
+                alt="html5 logo" class="s-logo">
+              <h3 class="h3">HTML 5</h3>
+            </a>
+
+            <a class="logo_div"
+              href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS"
+              rel="noopener noreferrer" target="_blank">
+              <img src="./assets/Skills-Logos/L_css.svg"
+                alt="CSS logo" class="s-logo">
+              <h3 class="h3">CSS</h3>
+            </a>
+
+            <a class="logo_div"
+              href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
+              rel="noopener noreferrer" target="_blank">
+              <img src="./assets/Skills-Logos/L_js.svg"
+                alt="JavaScript logo" class="s-logo">
+              <h3 class="h3">Javascript</h3>
+            </a>
+
+          </div>
+
+        </section>
+
+        <br>
+
+        <h2 class="h2 service-title article-title">Tools</h2>
+
+        <section class="skill">
+
+          <!-- <header>
+            <h2 class="h2 article-title"
+              style="display: block;">Skills</h2>
+          </header> -->
+          <div class="skills">
+
+
+
+            <a class="logo_div"
+              href="https://www.jetbrains.com/idea/"
+              rel="noopener noreferrer" target="_blank">
+              <img
+                src="./assets/Tools-Logos/intellij-logo.svg"
+                alt="SpringBoot logo" class="s-logo">
+              <h3 class="h3">IntelliJ IDEA</h3>
+            </a>
+
+            <a class="logo_div"
+              href="https://maven.apache.org/"
+              rel="noopener noreferrer" target="_blank">
+              <img src="./assets/Tools-Logos/maveen-logo.png"
+                alt="JAVA logo" class="s-logo">
+              <h3 class="h3">Apache Maven</h3>
+            </a>
+
+            <a class="logo_div"
+              href="https://spring.io/projects/spring-framework"
+              rel="noopener noreferrer" target="_blank">
+              <img
+                src="./assets/Tools-Logos/postman-logo.png"
+                alt="Spring logo" class="s-logo">
+              <h3 class="h3">Postman</h3>
+            </a>
+
+            <a class="logo_div"
+            href="https://github.com/pranshubisht9"
+            rel="noopener noreferrer" target="_blank">
+            <img src="./assets/Tools-Logos/L_github.svg"
+              alt="Github logo" class="s-logo">
+            <h3 class="h3">Github</h3>
+          </a>
+
+          <a class="logo_div"
+          href="https://github.com/pranshubisht9"
+          rel="noopener noreferrer" target="_blank">
+          <img src="./assets/Tools-Logos/gitLab.png"
+            alt="Gitlab logo" class="s-logo">
+          <h3 class="h3">Gitlab</h3>
+        </a>
+
+        <a class="logo_div"
+        href="https://github.com/pranshubisht9"
+        rel="noopener noreferrer" target="_blank">
+        <img src="./assets/Tools-Logos/awsCodeCommit.svg"
+          alt="Gitlab logo" class="s-logo">
+        <h3 class="h3">Aws codeCommit</h3>
+      </a>
+
+            <a class="logo_div"
+              href="https://www.javatpoint.com/spring-boot-download-and-install-sts-ide#:~:text=Spring%20Tool%20Suite%20(STS)%20IDE,quick%20fixes%20for%20the%20applications."
+              rel="noopener noreferrer" target="_blank">
+              <img
+                src="./assets/Tools-Logos/sts-tool-logo.png"
+                alt="Hibernate logo" class="s-logo">
+              <h3 class="h3">Spring Tool Suite</h3>
+            </a>
+
+
+            <a class="logo_div"
+              href="https://code.visualstudio.com/"
+              rel="noopener noreferrer" target="_blank">
+              <img src="./assets/Tools-Logos/vs-code-logo.svg"
+                alt="html5 logo" class="s-logo">
+              <h3 class="h3">VS Code</h3>
+            </a>
+
+            <a class="logo_div"
+              href="https://swagger.io/"
+              rel="noopener noreferrer" target="_blank">
+              <img src="./assets/Tools-Logos/swagger-logo.png"
+                alt="CSS logo" class="s-logo">
+              <h3 class="h3">Swagger</h3>
+            </a>
+
+          </div>
+
+        </section>
+
+
+
+      </article>
+
+      <!--
+        - #Projects
+      -->
+
+      <!-- <article class="portfolio" data-page="portfolio"> -->
+      <article class="portfolio" data-page="projects">
+
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active"
+                data-filter-btn>All</button>
+            </li>
+
+            <!-- <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li> -->
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web
+                development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>
+                Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+          </div>
+
+          <ul class="project-list">
+
+            <!-- Project latesh 30-01-2023  -->
+
+            <li class="project-item  active"
+              data-filter-item data-category="applications">
+              <a href="https://github.com/pranshubisht9/One_Stop_Solutions"
+                target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img
+                    src="./assets/images/Project00oneStopHomePage.png"
+                    alt="One Stop Solutions" loading="lazy"
+                    style="height: 126px !important;">
+                </figure>
+              </a>
+
+              <div
+                style="display: flex; justify-content: space-between;">
+                <h3 class="project-title">One Stop Solutions
+                </h3><img height="25px"
+                  src="https://img.icons8.com/doodle/48/null/github--v1.png"
+                  onclick="oneStopSolutionsGithub()"
+                  class="github-project" />
+              </div>
+
+              <p class="project-category">Java Application
+              </p>
+
+              <!-- <div class="project-description" style="background-color: brown;"> -->
+              <br>
+              <div class="project-description-info">
+                One-Stop Solutions is a Java-based
+                application designed to streamline customer
+                service for electronic issues. The
+                application provides a centralized platform
+                for managing electronic issues, making it a
+                one-stop solution for all customer service
+                needs.</div>
+
+              <div class="technology-stack">
+                <h3>Technology Stack : </h3>
+                SpringBoot && Hibernate && MySQL && Java8 &&
+                JavaScript && CSS && HTML
+              </div>
+              <!-- </div> -->
+
+            </li>
+
+
+            <!-- Project 0  -->
+
+            <li class="project-item  active"
+              data-filter-item data-category="applications">
+              <a href="https://github.com/pranshubisht9/nifty-competition-2668"
+                target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project0.png"
+                    alt="Course Monitoring System"
+                    loading="lazy"
+                    style="height: 126px !important;">
+                </figure>
+              </a>
+
+              <div
+                style="display: flex; justify-content: space-between;">
+                <h3 class="project-title">Course Monitoring
+                  System</h3><img height="25px"
+                  src="https://img.icons8.com/doodle/48/null/github--v1.png"
+                  onclick="courseMonitoryGithub()"
+                  class="github-project" />
+              </div>
+
+              <p class="project-category">Java Application
+              </p>
+
+              <!-- <div class="project-description" style="background-color: brown;"> -->
+              <br>
+              <div class="project-description-info">
+                Automated Course Monitoring System will keep
+                the records of all the
+                courses,batches,faculties and the daywise
+                update for every batch. It will also help
+                the Faculty Head to maintain the course
+                plan. </div>
+
+              <div class="technology-stack">
+                <h3>Technology Stack : </h3>
+                JAVA && MYSQL && JDBC
+              </div>
+              <!-- </div> -->
+
+            </li>
+
+            <li class="project-item  active"
+              data-filter-item
+              data-category="web development">
+              <a href="https://pranshubisht9.github.io/ketto.org/BrowseFundraisers.html"
+                target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project1.png"
+                    alt="ketto.io(clone)" loading="lazy">
+                </figure>
+              </a>
+
+              <div
+                style="display: flex; justify-content: space-between;">
+                <h3 class="project-title">ketto.org(clone)
+                </h3><img height="25px"
+                  src="https://img.icons8.com/doodle/48/null/github--v1.png"
+                  onclick="KettoGithub()"
+                  class="github-project" />
+              </div>
+
+              <p class="project-category">Web development
+              </p>
+
+              <!-- <div class="project-description" style="background-color: brown;"> -->
+              <br>
+              <div class="project-description-info">In this
+                colaboratory project we have tried to make a
+                look alike clone of Ketto.org Website. With
+                our efforts and the technology stack, that
+                we have learned till now, we were able to
+                clone the front end with similar looks and
+                features.</div>
+              <div class="technology-stack">
+                <h3>Technology Stack : </h3>
+
+                HTML && CSS && JAVASCRIPT
+              </div>
+              <!-- </div> -->
+
+            </li>
+            <!--2rd project  -->
+
+
+            <li class="project-item  active"
+              data-filter-item
+              data-category="web development">
+              <a href="https://pranshubisht9.github.io/Inventory_Admin_User/"
+                target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img
+                    src="./assets/images/inventory_admin_user.png"
+                    alt="orizon" loading="lazy">
+                </figure>
+              </a>
+              <div
+                style="display: flex; justify-content: space-between;">
+                <h3 class="project-title">Inventory
+                  Prototype Admin-User Side</h3> <img
+                  height="25px"
+                  src="https://img.icons8.com/doodle/48/null/github--v1.png"
+                  onclick="InventoryGithub()"
+                  class="github-project" />
+              </div>
+
+              <p class="project-category">Web development
+              </p>
+
+              <!-- <div class="project-description" style="background-color: brown; height: 25px;"> -->
+              <br>
+
+              <div class="project-description-info">
+                Self made inventory project where admin have
+                accessability feature while user have some.
+              </div>
+              <div class="technology-stack">
+                <h3>Technology Stack : </h3>
+
+                VANILLA JAVASCRIPT
+              </div>
+
+              <!-- </div> -->
+
+            </li>
+
+            <!-- Project 3  -->
+
+            <li class="project-item  active"
+              data-filter-item
+              data-category="web development">
+              <a href="https://pranshubisht9.github.io/codeCov.io/"
+                target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project2.png"
+                    alt="orizon" loading="lazy">
+                </figure>
+              </a>
+              <div
+                style="display: flex; justify-content: space-between;">
+                <h3 class="project-title">Codecove.io(clone)
+                </h3> <img height="25px"
+                  src="https://img.icons8.com/doodle/48/null/github--v1.png"
+                  onclick="CodeCovGithub()"
+                  class="github-project" />
+              </div>
+
+              <p class="project-category">Web development
+              </p>
+
+              <!-- <div class="project-description" style="background-color: brown; height: 25px"> -->
+              <br>
+              <div class="project-description-info">
+                In this colaboratory project we have tried
+                to make a look alike clone of Ketto.org
+                Website. With our efforts and the technology
+                stack, that we have learned till now in
+                Unit-2, we were able to
+                clone the front end with similar looks and
+                features.
+              </div>
+              <div class="technology-stack">
+                <h3>Technology Stack : </h3>
+
+                HTML && CSS && JAVASCRIPT
+              </div>
+
+              <!-- </div> -->
+
+            </li>
+
+            <!-- 4th project  -->
+
+            <li class="project-item  active"
+              data-filter-item
+              data-category="web development">
+              <a href="https://pranshubisht9.github.io/Star_Wars/"
+                target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img
+                    src="./assets/images/StarWarsSearch.png"
+                    alt="orizon" loading="lazy">
+                </figure>
+              </a>
+              <div
+                style="display: flex; justify-content: space-between;">
+                <h3 class="project-title">Star War Search
+                </h3> <img height="25px"
+                  src="https://img.icons8.com/doodle/48/null/github--v1.png"
+                  onclick="StarWarGithub()"
+                  class="github-project" />
+              </div>
+              <p class="project-category">Web development
+              </p>
+              <!-- <div class="project-description" style="background-color: brown; height: 25px"> -->
+              <br>
+              <div class="project-description-info">Vanilla
+                JS web app to Search for any Star Wars
+                Character. Build with the help of Star Wars
+                API and has the Classic UI (Color theme) of
+                the original Star Wars Movie.</div>
+              <div class="technology-stack">
+                <h3>Technology Stack : </h3>
+                HTML && CSS && JAVASCRIPT
+              </div>
+              <!-- </div> -->
+
+            </li>
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="certifications">
+
+        <header>
+          <h2 class="h2 article-title">Certifications</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="https://drive.google.com/file/d/1wzYA712CYUbd7Zp7yVNYi_4aOAgAt9U5/view?usp=sharing"
+                target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/c_ncc.png"
+                    alt="NCC C-Certificate Army Wing"
+                    loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Army</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2021-03-15">Mar 15,
+                      2021</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">NCC
+                    C-Certificate</h3>
+
+                  <p class="blog-text">
+                    Successfully completed 3 year
+                    training(Army Wing) under the authority
+                    of ministry of Defence, Government of
+                    India.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="https://drive.google.com/file/d/1dQzAtsvwl5wCB55Z3kSVTi_GfwkAE1rM/view?usp=sharing"
+                target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img
+                    src="./assets/images/c_chitranshS.jpg"
+                    alt="Chitransh Trophy Winner"
+                    loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Sports</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2015-11-01">Nov 01,
+                      2015</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">4th
+                    Chitransh Singh State Football Cup
+                    Champion</h3>
+
+                  <p class="blog-text">
+                    Won school state championship in 2015
+                    with 25K money prize.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="https://drive.google.com/file/d/19yh0v9uF57YsYy0Sr2NGU0yZ4VgZI74h/view?usp=sharing"
+                target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/c_stateHand.jpg"
+                    alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Sports</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2019-11-24">Nov 24,
+                      2019</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">40th Senior
+                    Men Handball U.P State Champion</h3>
+
+                  <p class="blog-text">
+                    Participated in state tournament
+                    championship in 2019 and represented
+                    Ayodhya(U.P).
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://maps.google.com/maps?q=lucknow%20cantt&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              width="400" height="300"
+              loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form class="form" name="submit-to-google-sheet">
+
+            <div class="input-wrapper">
+              <input type="text" name="Name"
+                class="form-input" placeholder="Full name"
+                required data-form-input>
+
+              <input type="email" name="Email"
+                class="form-input"
+                placeholder="Email address" required
+                data-form-input>
             </div>
 
-            <div>
-                <a href="https://t.me/pranshu_bisht" target="_blank">
-                <img src="./logo/tg2.svg" alt="Telegram"> </a>
-            </div>
-<!-- footer logo -->
+            <textarea name="Message" class="form-input"
+              placeholder="Your Message" required
+              data-form-input></textarea>
 
-<div>
-    <a href="https://www.linkedin.com/in/pranshubisht9/" target="_blank">
-    <img src="./logo/ln2.svg" alt="Linkdln"> </a>
-</div>
+            <button class="form-btn" type="submit">
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
 
-            <div>
-                <a href="https://www.facebook.com/bishtpranshu/" target="_blank">
-                <img src="./logo/fb2.png" alt="facebook"> </a>
-            </div>
+          </form>
+          <div
+            style="display: flex; justify-content: end; margin: 3px 8px 0px 0px;">
+            <span id="msg"></span>
+          </div>
+        </section>
 
-            <div>
-                <a href="https://github.com/pranshubisht9" target="_blank">
-                <img src="./logo/gh2.svg" alt="Github"> </a>
-            </div>
+      </article>
 
-
-            <div>
-                <a href="https://www.instagram.com/pranshu_bisht/" target="_blank">
-                <img src="./logo/ig2.svg" alt="Instagram"> </a>
-            </div>
     </div>
 
+  </main>
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
 
+  <!--
+    - ionicon link
+  -->
+  <script type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <div id="bottomMost">
-        <div>
-        <span>
-        <img src="https://readme-typing-svg.herokuapp.com/?lines=Thanks+For+Visiting!!&center=true&color=ffffff" alt="Thanks For Visiting"> </span>
-        <span id="redirectReload" onclick="window.location.href='../subpages/java.html'">
-            &#169 Pranshu Singh Bisht
-        </span>
-    </div>
-    </div>
-
-</footer>
 </body>
+
 </html>
-
 <script>
-    let num = Math.floor(Math.random() * 1643);
-    console.log('num:', num)
-    fetch("https://type.fit/api/quotes").then((res)=>{
-        return (res.json());
-    }).then((data)=>{
-        console.log('data:', data[num])
-        // console.log(data)
-        quote(data[num])
-    }).catch(function(err){
-        console.log(err)
-    })
-    let quote = (data) => {
-        let x = document.getElementById("quote").innerText = data.text;
-        console.log('x:', x)
-        document.getElementById("authorName").innerHTML = `By: ${data.author}`;
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxbRhZPy0CJKkg-T5PpfbpIuZU70agVY04EJRc3OejX_SBsra37DIVleh9jxvUFZwOD3A/exec'
+  const form = document.forms['submit-to-google-sheet']
+  let msg = document.getElementById("msg");
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        msg.innerHTML = "Message sent successfully";
+        setTimeout(function () {
+          msg.innerHTML = "";
+        }, 1000)
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+<script src="./assets/js/ref.js"></script>
+<script
+  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+  </script>
 
+<!-- <script>
+  GitHubCalendar(".calendar", "pranshubisht9");
+
+  // or enable responsive functionality:
+  GitHubCalendar(".calendar", "pranshubisht9", { responsive: true });
+
+  // Use a proxy
+  GitHubCalendar(".calendar", "pranshubisht9", {
+    proxy(username) {
+      return fetch(`https://your-proxy.com/github?user=${pranshubisht9}`)
     }
-</script>
-
-<script src="./js/timer.js"></script>
-<script src="./js/myPhoto.js"></script>
-<script src="./js/index.js"></script>
-
-
-
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QW8FEWDQ6D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QW8FEWDQ6D');
-</script>
+  }).then(r => r.text())
+</script> -->
