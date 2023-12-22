@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Poor+Story&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap');
+
+header{
+    color: white;
+    width: 100%;
+    height: 150px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    background: #5a76a8;
+background: -webkit-linear-gradient(to right, #243B55, #141E30);
+background: linear-gradient(to right, #243B55, #141E30); 
+align-items: center;
+overflow-y: hidden;
+}
+#namaste{
+    margin-left: 10px;
+}
+#clockdate{
+    width: 20%;
+    padding: 1%;
+}
+#namaskar{
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 3vw;
+}
+#quoteBox{
+    width: 50%;
+    padding: 1%;
+
+}
+#quote{
+    font-family: 'Paytone One', sans-serif;
+font-family: 'Poor Story', cursive;
+}
+
+
+@media screen and (max-width: 942px){
+    #quote{
+font-size: 21px;
+    }
+#namaskar{
+font-size: 21px;
+
+}
+  }
+
+@media screen and (max-width: 725px){
+    header{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5%;
+        
+    }
+    header>div{
+        margin-top: 10px;
+    }
+    #clockdate{
+        margin-bottom: 10px;
+        /* padding-top: 1%; */
+    }
+    #clock{
+        font-size: 50px;
+        /* margin-top: %; */
+        }
+
+    #animation-social{
+        margin-top: 10px;
+    }
+    #main{
+        height: 349px !important;
+    }
+
+    #main2 > ul {
+        width: 90% !important;
+        display: flex;
+        justify-content: space-between;
+      }
+      #quoteBox {
+        width: 80%;
+        font-size: 25px;
+      }
+      #clockdate {
+        width: 80%;
+      }
+
+      #authorName{
+        margin-top: 3%;
+        font-size: 15px;
+      }
+
+      #clock>span{
+        font-size: 30px;
+      }
+}
+@media screen and (max-width: 481px){
+  
+}

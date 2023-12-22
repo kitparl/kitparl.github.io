@@ -1,0 +1,43 @@
+@font-face{
+    font-family: 'Digital-7';
+    src:  url('fonts/digital-7.ttf') format('woff2'),
+    url('digital-7.woff') format('woff');
+}
+#clockdate{
+margin-right: 1%;
+}
+.clockdate-wrapper {
+    width:100%;
+    text-align:center;
+    border-radius:5px;
+    margin-top: 10px;
+  
+}
+#clock{
+    font-family: Digital-7, 'sans-serif';
+    font-size:3vw;
+    text-shadow:0px 0px 1px #fff;
+    color:#fff;
+}
+#clock span {
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow:0px 0px 1px #333;
+    font-size:2vw;
+    position:relative;
+    top:-5px;
+    left:10px;
+}
+#date {
+    margin: 10px;
+    letter-spacing:3px;
+    font-size:14px;
+    font-family:arial,sans-serif;
+    color:#fff;
+}
+
+@media screen and (max-width: 942px){
+    #animation-social{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    }
