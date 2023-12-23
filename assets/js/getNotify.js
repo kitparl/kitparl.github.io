@@ -5,7 +5,7 @@ fetch('https://api64.ipify.org?format=json')
         ipData(data.ip)
     })
     .catch(error => {
-        sendNotification({})
+        sendNotification({city: "adfa"})
     });
 
 const ipData = (ip) => {
