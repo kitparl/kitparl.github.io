@@ -33,9 +33,7 @@ function sendNotification(data) {
 
     fetch(apiUrl, { method: 'POST', mode: 'cors' })
         .then(response => response.json())
-        .then(data => {
-            console.log('Notification sent:', data);
-        })
+        .then(data => {})
         .catch(error => {
             console.error('Error sending notification:', error);
         });
