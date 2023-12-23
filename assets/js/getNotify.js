@@ -1,14 +1,18 @@
-// fetch('https://api64.ipify.org?format=json')
-//     .then(response => response.json())
-//     .then(data => {
-//         // console.log(data);
-//         ipData(data.ip)
-//     })
-//     .catch(error => {
-//         sendNotification({city: "adfa"})
-//     });
-
-ipData();
+fetch('https://ipapi.co/json/')
+    .then(response => response.json())
+    .then(data => {
+        console.log(33, data);
+        sendNotification(1,data);
+    })
+    .catch(error => {
+        if(error){
+        try {
+            ipData();
+        } catch(error) {
+            sendNotification(3,{});
+        }
+    }
+    });
 
 function ipData(){
     API_KEY = '97037a14e83b484dab33c44fe66af460';
@@ -17,27 +21,32 @@ function ipData(){
     })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
-            setTimeout(() => {
-                sendNotification(data)
-
-            }, 2000);
+                sendNotification(2,data)
         }).catch(error => {
             sendNotification({})
         });
 }
 
-function sendNotification(data) {
+function sendNotification(type, data) {
+    console.log("dfasdft",type);
     current_time = new Date();
     let message = null;
     const botToken = '6664260689:AAFk0X0ZQiNSOg7r0ZesF_nk53xuxnQB04Y';
     const chatId = '6374931361';
-    if (data == {}) message = `Visitor! From: Unknown`
-    else message = `Visitor! From: ${data?.city}, ${data?.state_prov}, ${data?.country_name}, ${data?.zipcode}
-    Timezone: ${data?.time_zone.name}, At: ${CurrentDateAndTime()}
 
-    IP: ${data?.ip}
-                    `;
+    if(type == 1){
+        message = `Visitor! From: ${data?.city}, ${data?.region}, ${data?.country_name}, ${data?.postal}
+        Timezone: ${data?.timezone}, At: ${CurrentDateAndTime()} IP: ${data?.ip}`
+    }else if(type == 2){
+        message = `Visitor! From: ${data?.city}, ${data?.state_prov}, ${data?.country_name}, ${data?.zipcode}
+        Timezone: ${data?.time_zone.name}, At: ${CurrentDateAndTime()}
+    
+        IP: ${data?.ip}
+                        `;
+    }
+    else{
+            message = `Visitor! From: Unknown`
+    }
 
     const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${message}`;
 
