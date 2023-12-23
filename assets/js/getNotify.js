@@ -1,6 +1,7 @@
 fetch('https://api64.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
+        // console.log(data);
         ipData(data.ip)
     })
     .catch(error => {
@@ -8,7 +9,9 @@ fetch('https://api64.ipify.org?format=json')
     });
 
 const ipData = (ip) => {
-    fetch(`http://ip-api.com/json/${ip}`)
+    fetch(`http://ip-api.com/json/2402:e280:21c4:26:3fa:1832:70d0:d101`,{
+        mode: 'cors'
+    })
         .then(response => response.json())
         .then(data => {
             setTimeout(() => {
@@ -34,7 +37,5 @@ function sendNotification(data) {
     fetch(apiUrl, { method: 'POST', mode: 'cors' })
         .then(response => response.json())
         .then(data => {})
-        .catch(error => {
-            console.error('Error sending notification:', error);
-        });
+        .catch(error => {});
 }
