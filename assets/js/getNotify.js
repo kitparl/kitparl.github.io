@@ -1,6 +1,8 @@
 fetch('https://ipapi.co/json/')
     .then(response => response.json())
     .then(data => {
+        const randomHexadecimal = generateRandomHexadecimal();
+        sessionStorage.setItem('ChatKeyIdent', JSON.stringify((data?.city).slice(0, 3)+(data?.ip.slice(0, 4)+"-"+randomHexadecimal)));
         sendNotification(1,data);
     })
     .catch(error => {
@@ -20,6 +22,7 @@ function ipData(){
     })
         .then(response => response.json())
         .then(data => {
+                sessionStorage.setItem('ChatKeyIdent', JSON.stringify((data?.city).slice(0, 3)+(data?.ip.slice(0, 4)+"-"+randomHexadecimal)));
                 sendNotification(2,data)
         }).catch(error => {
             sendNotification({})
@@ -70,3 +73,9 @@ const formattedCurrentTime = `${hours.toString().padStart(2, '0')}:${minutes.toS
 return `${formattedCurrentDate} ${formattedCurrentTime}`
 
 }
+
+function generateRandomHexadecimal() {
+    const randomHex = Math.floor(Math.random() * 0x100).toString(16);
+      const paddedHex = randomHex.padStart(2, '0');
+    return paddedHex;
+  }
