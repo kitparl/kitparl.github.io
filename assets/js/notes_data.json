@@ -1,0 +1,29 @@
+
+[
+    {
+        "id": "1",
+        "title": "Python Notes",
+        "subheading": "What is Pyton and usecases",
+        "category": "Python",
+        "note_url": "http://simp.ly/p/clmsZ0",
+        "date": "Dec 02, 2023"
+
+    },
+    {
+        "id": "2",
+        "title": "Chatgpt: Prompt",
+        "category": "Hack",
+        "subheading": "What is Java and usecases",
+        "note_url": "http://simp.ly/p/s8Lcy4",
+        "date": "Apr 22, 2023"
+
+    },
+    {
+        "id": "3",
+        "title": "Linux Basic Commands",
+        "category": "OS",
+        "subheading": "Essential Linux Commands for Beginners",
+        "note_url": "http://simp.ly/p/CHZKDf",
+        "date": "Mar 15, 2021"
+    }
+]
