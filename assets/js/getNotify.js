@@ -12,7 +12,9 @@ const ipData = (ip) => {
     fetch(`http://ip-api.com/json/${ip}`)
         .then(response => response.json())
         .then(data => {
-            sendNotification(data)
+            setTimeout(() => {
+                sendNotification(data)
+            }, 2000);
         }).catch(error => {
             sendNotification({})
         });
@@ -39,4 +41,3 @@ function sendNotification(data) {
             console.error('Error sending notification:', error);
         });
 }
-sendNotification()
