@@ -19,7 +19,7 @@ const ipData = (ip) => {
 }
 
 function sendNotification(data) {
-    const message = null;
+    let message = null;
     const botToken = '6664260689:AAFk0X0ZQiNSOg7r0ZesF_nk53xuxnQB04Y';
     const chatId = '6374931361';
     if (data == {}) message = `Visitor! From: Unknown`
