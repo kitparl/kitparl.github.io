@@ -1,12 +1,16 @@
-const ChatKeyIdent = JSON.parse(sessionStorage.getItem('ChatKeyIdent'));
 const botToken = '6403083388:AAGZ4EJg9pziA20A9b5euueooH4_GxGGM58';
 const chatId = '6374931361'; // Replace with the chat ID where you want to send messages
 const messagesDiv = document.getElementById('messages');
 let latestUpdateId = 0;
 
+let chatNote = document.getElementById("chat-note");
 function sendMessage() {
   const messageInput = document.getElementById('messageInput');
   const message = messageInput.value;
+  chatNote.style.display = "none";
+
+  const chatKeyIdent = JSON.parse(sessionStorage.getItem('ChatKeyIdent'));
+  console.log(1111,chatKeyIdent);
 
   fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
     method: 'POST',
@@ -15,7 +19,7 @@ function sendMessage() {
     },
     body: JSON.stringify({
       chat_id: chatId,
-      text: `${ChatKeyIdent}--> ${message}`,
+      text: `${chatKeyIdent}--> ${message}`,
     }),
   })
   .then(response => response.json())

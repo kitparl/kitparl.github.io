@@ -444,8 +444,10 @@
           </h3>
 
           <div id="chat" class="chat-div">
-            <div id="messages" class="chat-div"></div>
-            <input type="text" id="messageInput" placeholder="Type your message">
+            <div id="messages" class="chat-div">
+              <span id="chat-note">If I am online, I do instant replies...</span>
+            </div>
+            <input type="text" id="messageInput" placeholder="Type your message" min="1">
             <button id="sendButton" onclick="sendMessage()">Send</button>
           </div>
 

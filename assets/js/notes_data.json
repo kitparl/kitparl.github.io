@@ -1,22 +1,19 @@
-
 [
     {
         "id": "1",
-        "title": "Python Notes",
-        "subheading": "Accelerated introduction to Python",
-        "category": "Python",
-        "note_url": "http://simp.ly/p/clmsZ0",
-        "date": "Dec 02, 2023"
-
-    },
-    {
-        "id": "2",
         "title": "Chatgpt: Prompt",
-        "category": "Hack",
+        "category": "Chatbot",
         "subheading": "Understand dynamic conversational AI Chatbot",
         "note_url": "http://simp.ly/p/s8Lcy4",
         "date": "Apr 22, 2023"
-
+    },
+    {
+        "id": "2",
+        "title": "Java Mastery Notes",
+        "category": "Java",
+        "subheading": "A Comprehensive Guide to Programming Excellence",
+        "note_url": "http://simp.ly/p/CqdgBZ",
+        "date": "Aug 12, 2022"
     },
     {
         "id": "3",
@@ -25,5 +22,13 @@
         "subheading": "Essential Linux Commands for Beginners",
         "note_url": "http://simp.ly/p/CHZKDf",
         "date": "Mar 15, 2021"
+    },
+    {
+        "id": "4",
+        "title": "Python Notes",
+        "subheading": "Accelerated introduction to Python",
+        "category": "Python",
+        "note_url": "http://simp.ly/p/clmsZ0",
+        "date": "Dec 02, 2023"
     }
 ]
