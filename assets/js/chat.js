@@ -10,7 +10,6 @@ function sendMessage() {
   chatNote.style.display = "none";
 
   const chatKeyIdent = JSON.parse(sessionStorage.getItem('ChatKeyIdent'));
-  console.log(1111,chatKeyIdent);
 
   fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
     method: 'POST',
@@ -24,14 +23,11 @@ function sendMessage() {
   })
   .then(response => response.json())
   .then(data => {
-    console.log('Message sent:', data);
     messagesDiv.innerHTML += `<div><strong>You:</strong> ${message}</div>`;
     messageInput.value = '';
     checkForNewMessages();
   })
-  .catch(error => {
-    console.error('Error sending message:', error);
-  });
+  .catch(error => {});
 }
 
 function checkForNewMessages() {
