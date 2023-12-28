@@ -1,4 +1,5 @@
-const botToken = '6403083388:AAGZ4EJg9pziA20A9b5euueooH4_GxGGM58';
+const botToken = '6403083388:AAGpFcmkIij7eM_NCU3mCZ0hTnm9X5jzUzc';
+
 const chatId = '6374931361'; // Replace with the chat ID where you want to send messages
 const messagesDiv = document.getElementById('messages');
 let latestUpdateId = 0;
